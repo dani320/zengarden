@@ -1,1 +1,1 @@
-{"mappings":"AACA;EACI","sources":["scss/nav.scss","scss/style.scss"],"sourcesContent":[null,"@import \"./nav.scss\";\r\n@import \"./main.scss\";\r\n@import \"./footer.scss\";\r\n\r\n"],"names":[],"version":3,"file":"index.8368275b.css.map","sourceRoot":"/__parcel_source_root/"}
+{"mappings":"","sources":["scss/style.scss"],"sourcesContent":["@import \"./nav.scss\";\r\n@import \"./main.scss\";\r\n@import \"./footer.scss\";\r\n\r\n"],"names":[],"version":3,"file":"index.8368275b.css.map","sourceRoot":"/__parcel_source_root/"}
