@@ -1,0 +1,15 @@
+//Main Title
+header h1::after{
+    @extend .Symbol;
+}
+.Symbol{
+    content: url("../Olympic.svg");
+    display: flex;
+    margin: auto;
+    padding: 0;
+}
+
+html{
+    background-color: red;
+}
+

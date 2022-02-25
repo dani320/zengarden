@@ -1,0 +1,13 @@
+.Symbol, header h1::after {
+  content: url("../Olympic.svg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 0;
+}
+
+html {
+  background-color: red;
+}
+/*# sourceMappingURL=top-section.css.map */
