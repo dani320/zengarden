@@ -1,31 +1,23 @@
 {
-  "name": "nova-pasta",
+  "name": "zen-project",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel ./src/index.html",
+    "start": " ./src/index.html",
     "prebuild": "npx rimraf build",
     "build": "parcel build --public-url ./ ./src/index.html  --out-dir build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.3.2",
-    "node-sass-svg": "^2.0.0",
-    "parcel": "^2.3.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dani320/zengarden.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dani320/zengarden/issues"
   },
-  "homepage": "https://github.com/dani320/zengarden#readme",
-  "description": "",
-  "dependencies": {
-    "bootstrap-icons": "^1.8.1"
-  }
+  "homepage": "https://github.com/dani320/zengarden#readme"
 }
