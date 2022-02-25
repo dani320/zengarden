@@ -5,15 +5,87 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 /* basic elements */
-@import url(d:\BYU\2022.01_winter\CSS_advenced\Zen-Project\src\scss-sections\top-section.css);
+body, p {
+  text-align: justify;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
 html {
   margin: 0;
   padding: 0;
 }
 
 body {
-  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 35px;
+  margin-right: 35px;
   padding: 0;
+}
+
+.Symbol, header h1::before {
+  content: url("./Olympic.svg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  -webkit-animation: spin 4s linear infinite;
+          animation: spin 4s linear infinite;
+}
+
+@media only screen and (min-width: 768px) {
+  .Symbol, header h1::before {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+header h1, header h2 {
+  text-align: center;
+}
+
+.summary {
+  margin: auto;
+}
+
+.summary p {
+  text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+  .summary p {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body:o {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .sidebar {

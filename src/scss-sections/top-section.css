@@ -1,4 +1,4 @@
-.Symbol, header h1::after {
+.Symbol, header h1 {
   content: url("../Olympic.svg");
   display: -webkit-box;
   display: -ms-flexbox;

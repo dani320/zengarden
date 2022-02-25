@@ -1,5 +1,5 @@
 //Main Title
-header h1::after{
+header h1{
     @extend .Symbol;
 }
 .Symbol{
@@ -8,7 +8,6 @@ header h1::after{
     margin: auto;
     padding: 0;
 }
-
 html{
     background-color: red;
 }
