@@ -1,2 +1,26 @@
-
+.icons, .design-selection h3::after {
+  content: url("arrow-right-circle-fill.36fb2806.svg");
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+}
+.icons :active .design-archives, .design-selection h3::after :active .design-archives {
+  display: none;
+}
+html {
+  box-sizing: border-box;
+}
+.intro {
+  margin-top: 45%;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 23px;
+  margin-bottom: 50%;
+}
 /*# sourceMappingURL=index.8368275b.css.map */
