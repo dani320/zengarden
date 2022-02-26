@@ -117,3 +117,11 @@ header h1, header h2 {
   max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* this is for the middle section so it displays in two columns */
+#zen-supporting{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  grid-gap: 12px;
+}
