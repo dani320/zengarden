@@ -21,6 +21,7 @@
   "homepage": "https://github.com/dani320/zengarden#readme",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.3.2"
+    "parcel": "^2.3.2",
+    "sass": "^1.49.9"
   }
 }
