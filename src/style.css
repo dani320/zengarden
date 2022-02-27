@@ -26,6 +26,13 @@ body {
   padding: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  body {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
 .Symbol, header h1::before {
   content: url("./Olympic.svg");
   display: -webkit-box;
@@ -62,66 +69,119 @@ header h1, header h2 {
   text-align: center;
 }
 
-.summary {
+section.intro {
+  margin-bottom: 50px;
+}
+
+section.intro .summary {
   margin: auto;
 }
 
-.summary p {
+section.intro .summary p {
   text-align: justify;
 }
 
 @media only screen and (min-width: 768px) {
-  .summary p {
+  section.intro .summary p {
     text-align: center;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  body:o {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+section.intro .preamble p {
+  text-align: center;
+}
+
+#zen-supporting {
+  display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 50px;
+}
+
+.explanation, .participation, .benefits, .requirements {
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 25px;
+}
+
+.explanation h3, .participation h3, .benefits h3, .requirements h3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  text-align: center;
 }
 
 .sidebar {
-  margin: 20px;
-}
-
-.sidebar h3.select {
-  text-align: left;
-  margin-left: 20px;
-}
-
-.sidebar h3.archives {
-  text-align: left;
-  margin-left: 20px;
-}
-
-.sidebar h3.resources {
-  text-align: left;
-  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .sidebar ul {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .sidebar {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .sidebar .wrapper {
+    padding: 10px;
+    margin-top: 150px;
+    width: 130px;
+    margin-left: 450px;
+  }
+  .sidebar h3.select {
+    margin: 10px 0 5px 0;
+    width: 97px;
+    height: 16px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .sidebar h3.archives {
+    margin: 25px 0 5px 0;
+    width: 57px;
+    height: 14px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .sidebar h3.resources {
+    margin: 25px 0 5px 0;
+    width: 63px;
+    height: 10px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.sidebar ul {
+  display: block;
   margin: 0;
   padding: 0;
 }
 
 .sidebar li {
   display: block;
-  max-width: 100%;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */
-
-/* this is for the middle section so it displays in two columns */
-#zen-supporting{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 10px;
-  grid-gap: 12px;
-}
