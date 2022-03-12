@@ -89,13 +89,11 @@ header h1{
 
 //body columns and resposive
 #zen-supporting{
-    display: block;
     display: grid;
     //it will make the columns change for different screen sizes
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     grid-template-rows: auto;
     gap: 50px
-    
   }
 
   
