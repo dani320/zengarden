@@ -92,7 +92,6 @@ section.intro .preamble p {
 }
 
 #zen-supporting {
-  display: block;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(24rem, 1fr))[auto-fit];
