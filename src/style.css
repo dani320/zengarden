@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* css Zen Garden default style v1.02 */
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
 /* This file based on 'Tranquille' by Dave Shea */
@@ -5,6 +6,14 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 /* basic elements */
+@import url("./partials/_colors.scss");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body, p {
   text-align: justify;
 }
@@ -19,17 +28,51 @@ html {
 }
 
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 35px;
-  margin-right: 35px;
-  padding: 0;
+  max-width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url("./sports-background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 100%), url("./sports-background.jpg");
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 40px;
+    margin-right: 0;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+}
+
+.page-wrapper {
+  margin: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .page-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 85% 15%;
+        grid-template-columns: 85% 15%;
+    -ms-grid-rows: 400px 1200px;
+        grid-template-rows: 400px 1200px;
+    margin: 0;
+  }
+  .page-wrapper .intro {
+    margin-right: 50px;
+  }
+  .page-wrapper .main {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    margin-top: 60px;
+    margin-right: 50px;
+  }
+  .page-wrapper .sidebar {
+    margin-top: 0;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    grid-row: span 2;
+    max-height: 720px;
+    margin-right: 0;
+    border-radius: 0;
   }
 }
 
@@ -42,13 +85,6 @@ body {
   padding: 0;
   -webkit-animation: spin 4s linear infinite;
           animation: spin 4s linear infinite;
-}
-
-@media only screen and (min-width: 768px) {
-  .Symbol, header h1::before {
-    margin-left: 40%;
-    margin-right: 40%;
-  }
 }
 
 @-webkit-keyframes spin {
@@ -65,122 +101,114 @@ body {
   }
 }
 
+header h1 {
+  font-weight: bold;
+}
+
+header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 header h1, header h2 {
   text-align: center;
 }
 
-section.intro {
-  margin-bottom: 50px;
+section.intro header {
+  margin-top: 4px;
 }
 
 section.intro .summary {
-  margin: auto;
+  margin-top: 15px;
 }
 
 section.intro .summary p {
   text-align: justify;
 }
 
-@media only screen and (min-width: 768px) {
-  section.intro .summary p {
-    text-align: center;
-  }
+section.intro .preamble {
+  margin-top: 15px;
+  border: solid 1px rgba(0, 129, 200, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(0, 129, 200, 0.6);
+}
+
+section.intro .preamble h3 {
+  color: white;
 }
 
 section.intro .preamble p {
-  text-align: center;
+  text-align: justify;
+  margin-top: 5px;
 }
 
-#zen-supporting {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  gap: 50px;
+.main {
+  margin-top: 25px;
+  border: solid 1px rgba(0, 166, 81, 0.6);
+  background-color: rgba(0, 166, 81, 0.6);
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.explanation, .participation, .benefits, .requirements {
-  padding: 20px;
-  border: 2px solid;
-  border-radius: 25px;
+.main .explanation, .main .participation, .main .benefits, .main .requirements {
+  margin-top: 15px;
 }
 
-.explanation h3, .participation h3, .benefits h3, .requirements h3 {
-  margin-left: 0;
-  margin-right: 0;
+.main .explanation h3, .main .participation h3, .main .benefits h3, .main .requirements h3 {
+  color: white;
+}
+
+.main .explanation p, .main .participation p, .main .benefits p, .main .requirements p {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(290px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    gap: 50px;
+  }
+  .main footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 footer {
-  -ms-grid-row: 3;
-  grid-row: 3;
-  text-align: center;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .sidebar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 25px;
+  border: 1px solid rgba(238, 51, 78, 0.6);
+  border-radius: 15px;
+  background-color: rgba(238, 51, 78, 0.6);
+  padding: 20px;
 }
 
-.sidebar ul {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
+.design-name::before {
+  content: '🏅';
 }
 
-@media only screen and (min-width: 768px) {
-  .sidebar {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .sidebar .wrapper {
-    padding: 10px;
-    margin-top: 150px;
-    width: 130px;
-    margin-left: 450px;
-  }
-  .sidebar h3.select {
-    margin: 10px 0 5px 0;
-    width: 97px;
-    height: 16px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .sidebar h3.archives {
-    margin: 25px 0 5px 0;
-    width: 57px;
-    height: 14px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .sidebar h3.resources {
-    margin: 25px 0 5px 0;
-    width: 63px;
-    height: 10px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
-
-.sidebar ul {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar li {
-  display: block;
-  padding-top: 5px;
-  margin-bottom: 5px;
+li {
   list-style-type: none;
+}
+
+#design-archives nav ul li::before {
+  content: '🏃';
+}
+
+#zen-resources ul li::before {
+  content: '🏊';
 }
 /*# sourceMappingURL=style.css.map */
