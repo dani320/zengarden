@@ -6,12 +6,14 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 /* basic elements */
-@import url("./partials/_colors.scss");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Antic+Slab&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Alegreya Sans", sans-serif;
 }
 
 body, p {
@@ -20,6 +22,45 @@ body, p {
 
 h1, h2, h3 {
   text-align: center;
+  font-family: "Antic Slab", serif;
+}
+
+header h1 {
+  color: #EE334E;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 700px) {
+  header h1 {
+    font-size: 80px;
+    font-weight: bold;
+  }
+}
+
+header h2 {
+  color: #00A651;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 700px) {
+  header h2 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  body {
+    display: none;
+  }
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #FCB131;
+  font-weight: 700;
 }
 
 html {
@@ -37,13 +78,13 @@ body {
   body {
     margin-left: 40px;
     margin-right: 0;
-    margin-bottom: 40px;
     margin-top: 0;
   }
 }
 
 .page-wrapper {
   margin: 20px;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -55,14 +96,17 @@ body {
     -ms-grid-rows: 400px 1200px;
         grid-template-rows: 400px 1200px;
     margin: 0;
+    row-gap: 200px;
+    height: 100%;
   }
   .page-wrapper .intro {
     margin-right: 50px;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
   .page-wrapper .main {
     -ms-grid-row: 2;
     grid-row: 2;
-    margin-top: 60px;
     margin-right: 50px;
   }
   .page-wrapper .sidebar {
@@ -70,9 +114,10 @@ body {
     -ms-grid-column: 2;
     grid-column: 2;
     grid-row: span 2;
-    max-height: 720px;
+    max-height: 100%;
     margin-right: 0;
     border-radius: 0;
+    background-color: #EE334E;
   }
 }
 
@@ -210,5 +255,79 @@ li {
 
 #zen-resources ul li::before {
   content: '🏊';
+}
+
+.sidebar .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(290px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.sidebar .wrapper .design-archives h3, .sidebar .wrapper .design-selection h3 {
+  color: #ffffff;
+}
+
+.sidebar .wrapper .design-archives nav, .sidebar .wrapper .design-selection nav {
+  padding: 20px;
+}
+
+.sidebar .wrapper .design-archives nav ul, .sidebar .wrapper .design-selection nav ul {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar .wrapper .design-archives, .sidebar .wrapper .design-selection {
+    display: block;
+  }
+  .sidebar .wrapper .design-archives h3, .sidebar .wrapper .design-selection h3 {
+    margin: 5px;
+  }
+  .sidebar .wrapper .design-archives nav, .sidebar .wrapper .design-selection nav {
+    padding: 0;
+  }
+  .sidebar .wrapper .design-archives nav ul, .sidebar .wrapper .design-selection nav ul {
+    margin-left: 0;
+  }
+  .sidebar .wrapper .design-archives nav ul li, .sidebar .wrapper .design-selection nav ul li {
+    padding-top: 5px;
+  }
+}
+
+.sidebar .wrapper .zen-resources h3 {
+  color: #ffffff;
+}
+
+.sidebar .wrapper .zen-resources ul {
+  margin-left: 10px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar .wrapper .zen-resources {
+    display: block;
+  }
+  .sidebar .wrapper .zen-resources h3 {
+    margin: 5px;
+  }
+  .sidebar .wrapper .zen-resources ul {
+    padding: 0;
+    margin-left: 0;
+  }
+  .sidebar .wrapper .zen-resources ul li {
+    padding-top: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
